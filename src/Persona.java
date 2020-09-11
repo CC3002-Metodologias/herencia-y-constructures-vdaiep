@@ -3,15 +3,22 @@ public class Persona {
     protected String ocupacion;
     protected int edad;
 
-    public void comer() {
-        System.out.println("Ñom Ñom comida casera");
+    public Persona(String name, String ocupation, int age){
+        this.nombre = name;
+        this.ocupacion = ocupation;
+        this.edad = age;
     }
 
-    public void dormir() {
-        System.out.println("ZzzZzZzZ");
+    public void comer(String food) {
+        System.out.println("Ñom Ñom, rico ".concat(food));
     }
 
-    public String hacerLoSuyo() {
-        return "";
+    public void dormir(int horasDeTuto) {
+        System.out.println("" + new String(new char[horasDeTuto]).replace("\0", "Z"));
+    }
+
+    public void hacerLoSuyo(String loSuyo) {
+        System.out.println("Pasando la cuarentena.");
+        System.out.println(loSuyo);
     }
 }
